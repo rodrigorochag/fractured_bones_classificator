@@ -16,7 +16,7 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Carregar os dados da primeira classe
-class1_folder_path = '/home/netune/Documents/Bones/dataset/train/fractured'
+class1_folder_path = '/codigo/dataset/train/fractured'
 class1_image_paths = glob.glob(class1_folder_path + '/*.jpg')
 
 X_train_class1 = []
@@ -29,7 +29,7 @@ for path in class1_image_paths:
     y_train_class1.append(0)  # Supondo que a primeira classe seja rotulada como 0
 
 # Carregar os dados da segunda classe
-class2_folder_path = '/home/netune/Documents/Bones/dataset/train/not_fractured'
+class2_folder_path = '/codigo/dataset/train/not_fractured'
 class2_image_paths = glob.glob(class2_folder_path + '/*.jpg')
 
 X_train_class2 = []
